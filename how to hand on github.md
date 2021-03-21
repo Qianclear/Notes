@@ -50,3 +50,7 @@ bash里分别键入
 
 ## 刷新 OVER
 
+无法推送成功（应该是黄色的提示）
+
+上面提示的意思是远程版本比本地版本新，应该先拉取git pull origin master，再推送push，如果你确定，那么可以git push --force origin master直接覆盖远程版本即可
+
