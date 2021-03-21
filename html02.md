@@ -30,11 +30,13 @@ width：
 
 height：
 
-name ：可以为内联框架指定一个name属性
+name ：可以为内联框架指定一个name属性，其他超链接可以通过target来直接在内联框架打开
 
 > 在现实开发中不推荐使用内联框架，因为内联框架中的内容不会被搜索引擎所检索
 
 ```<iframe src="demo02.html" name="tom"></iframe>```
+
+> 后面这个结束标签最好加上别忘记，不然有可能它自己认为没有结束，
 
 ## 超链接
 
@@ -55,8 +57,6 @@ name ：可以为内联框架指定一个name属性
 
 ```<a href="http://www.baidu.com">我是一个超链接</a>```
 
-```<a href="http://www.baidu1234567.com">我是一个超链接</a>```
-
 traget的属性与作用
 
 | 属性   | 作用                          |
@@ -76,8 +76,6 @@ traget的属性与作用
 
 ​	这个属性就是id，id属性在同一个页面中只能有一个不能重复
 
-
-
 发送电子邮件的超链接，点击链接以后可以自动打开计算机中默认的邮件客户端
 
 ​	href="mailto:邮件地址"
@@ -94,3 +92,96 @@ traget的属性与作用
 	</center>
 ```
 
+## 表格
+
+| 属性 | 作用 | 备注|
+| ---- | ---- |----|
+| table |表明是表格标签 ||
+|border |设置表格标签|跟数字，应该是距边宽度|
+|width| 设置表格宽度 ||
+|height| 设置表格高度 ||
+|align |设置表格相对于页面的对齐方式|left,center,right|
+|cellspacing |设置单元格间距 |数字|
+|tr |是行标签 ||
+|th |是表头标签||
+|td| 是单元格标签||
+|align |也可以设置单元格文本对齐方式 |同上|
+|b| 是加粗标签||
+|colspan |设置跨列||
+|rowspan |设置跨行||
+
+举例：
+
+```
+    <table align="center" bgcolor="#deb887" border="1" width="300" height = "300" cellspacing="1">
+        <tr>
+            <th align="right">1.1</th>
+            <th>1.2</th>
+            <th>1.3</th>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+        </tr>
+    </table>
+```
+
+## 表单
+
+表单就是HTML页面中，用来收集用户信息的所有元素集合，然后把这些信息发给服务器
+
+| 属性 | 作用         | 备注                              |
+| ---- | -------------- | ----------------------------------- |
+| form | 该标签就是表单 ||
+|input type= text|文本输入框|value设置默认显示内容 |
+|input type=password| 密码输入框| value 设置默认显示内容|
+| input type=radio |单选框| name 属性可以对其进行分组 checked="checked"表示默认选中|
+|input type=checkbox |复选框 |checked="checked"表示默认选中|
+|input type=reset| 重置按钮 |value 属性修改按钮上的文本|
+|input type=submit| 提交按钮 |value 属性修改按钮上的文本|
+|input type=button |按钮 |value 属性修改按钮上的文本|
+|input type=file |文件上传域 ||
+|input type=hidden |是隐藏域|当要发送某些信息，而这些信息，不需要用户参与<br />就可以使用隐藏域（提交的时候同时发送给服务器）|
+|select| 下拉列表框 ||
+|option |下拉列表框中的选项|selected="selected"设置默认选中|
+|textarea |多行文本输入框|起始标签和结束标签中的内容是默认值 <br />rows 属性设置可以显示几行的高度 <br />cols 属性设置每行可以显示几个字符宽度|
+
++ 细节
+
+  form 标签是表单标签 
+
+  > **action** 属性设置提交的服务器地址 
+
+  > **method** 属性设置提交的方式 GET(默认值)或 POST 
+
+  表单提交的时候，**数据没有发送给服务器**的三种情况： 
+
+  1. 表单项没有 name 属性值 
+
+  2. 单选、复选（下拉列表中的 option 标签）都需要添加 value 属性，以便发送给服务器 
+
+  3. 表单项不在提交的 form 标签中 
+
+  **GET 请求的特点**： 
+
+  1. 浏览器地址栏中的地址是：action 属性[+?+请求参数] 
+
+     请求参数的格式是：name=value&name=value 
+
+  2. 不安全 
+
+  3. 它有数据长度的限制 
+
+  **POST 请求的特点是**： 
+
+  1. 浏览器地址栏中只有 action 属性值 
+
+  2. 相对于 GET 请求要安全 
+
+  3. 理论上没有数据长度的限制
