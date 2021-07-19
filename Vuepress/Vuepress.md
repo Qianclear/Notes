@@ -402,3 +402,11 @@ node --version
 ```https://tsanfer.xyz/``` 这个推荐的，也还可以
 
 ```https://www.it235.com/``` 这个也还好吧
+
+# 七、本地运行
+
+在docs文件夹所在目录vuepress dev docs
+
+# 八、打包推送运行
+
+vuepress build docs

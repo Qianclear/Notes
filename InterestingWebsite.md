@@ -12,6 +12,7 @@
 - 电子书 https://www.zqbook.top/
 - 奇怪的知识增加了 [https://zh.wikihow.com/%E9%A6%96%E9%A1%B5](https://zh.wikihow.com/首页) 
 - 查询相似网站 https://www.similarsites.com/ 
+- 图床 https://imgtu.com/album/yuwGj
 
 # 跟学习有关
 
