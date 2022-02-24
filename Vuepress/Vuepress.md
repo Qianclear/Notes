@@ -142,7 +142,7 @@ node --version
    mkdir .vuepress
    ```
 
-   进入docs文件夹饼创建.vuepress文件夹
+   进入docs文件夹并创建.vuepress文件夹
 
 2.  新建总配置文件`config.js` 
 
@@ -410,3 +410,6 @@ node --version
 # 八、打包推送运行
 
 vuepress build docs
+
+
+
