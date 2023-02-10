@@ -47,11 +47,11 @@ node --version
    npm install -g vuepress
    ```
 
-   > npm config set cache"D:\developTools\Node\node_cache"
+   > npm config set cache"D:\Tools\Blog\Node\node_cache"
    >
    > 设置全局模块存放路径
    >
-   > npm config set prefix"D:\developTools\Node\node_global"
+   > npm config set prefix"D:\Tools\Blog\Node\node_global"
    >
    >  令npm install XXX -g安装以后模块就在D:\developTools\Node\node_global里
    >
